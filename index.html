@@ -1,2 +1,45 @@
 <!DOCTYPE html>
-<html><head><title>PGold</title></head><body>Hello World</body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Plans</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="assets/gold-logo-thin.png" alt="Gold Logo" class="logo-img" />
+    </header>
+
+    <main class="main">
+      <section class="image-area">
+        <img src="assets/gold-image-3.jpg" alt="Preview" class="hero-image" />
+      </section>
+
+      <section class="plans-area">
+        <h2>Previous Plan</h2>
+        <div class="plan selected">€34.95 EVERY 30 DAYS</div>
+
+        <h3>Didn't find a plan that suits you?</h3>
+        <div class="plan">259€ FOR 3 YEARS</div>
+        <div class="plan">99€ FOR 1 YEAR</div>
+        <div class="plan">14.95€ FOR 30 DAYS</div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <button class="join-button">JOIN NOW!</button>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.plan').forEach(plan =>
+      plan.addEventListener('click', () => {
+        document.querySelector('.plan.selected')?.classList.remove('selected');
+        plan.classList.add('selected');
+      })
+    );
+  </script>
+</body>
+</html>
